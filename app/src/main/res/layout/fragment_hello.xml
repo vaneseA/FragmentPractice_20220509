@@ -8,6 +8,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="하하핫핫핫"/>
+        android:text="방갑아가"/>
 
 </LinearLayout>
