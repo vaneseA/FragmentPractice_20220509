@@ -7,16 +7,14 @@ import com.example.fragmentpractice_20220509.fragments.BirthYearFragment
 import com.example.fragmentpractice_20220509.fragments.HelloFragment
 import com.example.fragmentpractice_20220509.fragments.NameFragment
 
-class MainViewPagerAdapter(fm : FragmentManager) : FragmentPagerAdapter(fm) {
-    override fun getCount(): Int {
-        return 3
-    }
+class MainViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
+    override fun getCount() = 3
 
     override fun getItem(position: Int): Fragment {
-        if (position == 0) {
-            return NameFragment()
-        }else if (position == 1) {
-            return  BirthYearFragment()
-        }else return  HelloFragment()
+        return when (position) {
+            0 -> NameFragment()
+            1 -> BirthYearFragment()
+            else -> HelloFragment()
+        }
     }
 }
